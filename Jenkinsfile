@@ -1,6 +1,6 @@
 node {
     stage('SCM checkout'){
-        git 'https://github.com/lyogi4091/project1.git'
+        git credentialsId: 'GitHub_credentials', url: 'https://github.com/lyogi4091/project1.git'
     }
     //Building the Docker image from BitBucket repo
     stage('Building docker image'){
@@ -30,7 +30,7 @@ node {
             echo 'The code is in good format'
             }
     stage('Pushing the Formatted code'){
-        git credentialsId: '0c2f4a3f-a167-47bd-a1f1-f922abe61179', url: 'http://localhost:7990/scm/proj/proj1_repo.git'
+        git credentialsId: 'GitHub_credentials', url: 'https://github.com/lyogi4091/project1.git'
             try {
                 sh 'git add python.py';
                 sh 'git commit -m "commit after code format"';
