@@ -6,5 +6,4 @@ RUN apt-get update && apt-get install -y \
 	python3-pip 
 RUN pip3 install pycodestyle &&\
 	pip3 install --upgrade pycodestyle &&\
-	pip3 install autopep8 &&\
-	pip3 install --upgrade autopep8 
+	pip3 install autopep8

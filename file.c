@@ -2,6 +2,6 @@
 int main()
 {
    // printf() displays the string inside quotation
-   printf("Hello, World! from dockerfile");
+   printf("Hello, World! from Dockerfile.");
    return 0;
 }
