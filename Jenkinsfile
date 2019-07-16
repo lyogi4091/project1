@@ -3,7 +3,7 @@ node {
         git 'git@github.com:lyogi4091/project1.git'
     stage('Applying condition'){
         try {
-            withCredentials([usernamePassword(credentialsId: 'BitBucket-lyogi4091', passwordVariable: 'BB_password', usernameVariable: 'BB_username')])
+            //withCredentials([usernamePassword(credentialsId: 'BitBucket-lyogi4091', passwordVariable: 'BB_password', usernameVariable: 'BB_username')])
             sh 'pycodestyle --ignore=E501 python.py';
             } catch(x) {
                 println "The code is being formatted";
